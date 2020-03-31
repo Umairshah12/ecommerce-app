@@ -1,38 +1,82 @@
-.App {
-  text-align: center;
+:root {
+  --mainBlue: #2a2a72;
+  --lighBlue: #009ffd;
+  --mainWhite: #f3f3f3;
+  --mainDark: #232528;
+  --mainYellow: #ffa440;
+  --mainRed: #c21807;
+}
+body {
+  font-family: "Oswald", sans-serif !important;
+  background: var(--mainWhite) !important;
+  color: var(--mainDark) !important;
+}
+.text-title {
+  font-family: "Gotu", sans-serif;
+  letter-spacing: 0.3rem;
+  text-transform: uppercase;
+}
+.text-blue {
+  color: var(--mainBlue);
+}
+.text-bright {
+  color: var(--lighBlue);
+}
+.card:hover .card-img-top {
+  transform: scale(0.9);
+}
+.card-img-top {
+  transition: all 1s linear;
+}
+.cart-btn {
+  position: absolute;
+  bottom: "200px";
+  right: 0;
+  padding: 2rem, 0.4rem;
+  background: var(--lighBlue);
+  border: none;
+  color: var(--mainWhite);
+  font-size: 1.4rem;
+  border-radius: 0.5rem 0 0 0;
+  transform: (100%, 100%);
+  transition: all 1s linear !important;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.img-container {
+  position: relative;
+  /* overflow: hidden; */
+}
+.img-container:hover .cart-btn {
+  transform: translate(0, 0);
+}
+.close {
+  color: #aaaaaa;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+}
+.close:hover,
+.close:focus {
+  color: #000;
+  text-decoration: none;
+  cursor: pointer;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.btn-black {
+  background: transparent;
+  text-transform: capitalize;
+  font-size: 0.8rem !important;
+  border-radius: 0px !important;
+  color: var(--mainDark);
+  border: 0.1rem solid var(--mainDark) !important;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+.btn-black:hover {
+  background: var(--mainDark) !important;
+  color: var(--mainWhite) !important;
 }
-
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.cart-icon {
+  cursor: pointer;
+  font-size: 1.2rem;
+  color: var(--mainRed) !important;
 }
