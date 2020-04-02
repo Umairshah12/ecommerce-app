@@ -7,6 +7,7 @@ import CartList from "./CartList";
 import CartTotal from "./CartTotal";
 class Cart extends Component {
   render() {
+    // console.log(this.props.history);
     return (
       <section>
         <ProductConsumer>
@@ -19,7 +20,7 @@ class Cart extends Component {
                   <br></br>
                   <CartColums />
                   <CartList value={value} />
-                  <CartTotal value={value} />
+                  <CartTotal value={value} history={this.props.history} />
                 </React.Fragment>
               );
             } else {

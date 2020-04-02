@@ -18,10 +18,9 @@ function App() {
       <Switch>
         <Route exact path="/" component={ProductList} />
         <Route path="/product" component={Product} />
-        <Route component={Default} />
         <Route path="/details" component={Details} />
         <Route path="/cart" component={Cart} />
-        <Redirect to="/" />
+        <Route component={Default} />
       </Switch>
       <Model />
     </React.Fragment>
